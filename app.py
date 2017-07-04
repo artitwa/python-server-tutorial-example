@@ -11,6 +11,12 @@ def homepage():
     <p>It is currently {time}.</p>
     """.format(time=the_time)
 
+
+@app.route('/user', methods = ['GET'])
+def get_user():
+	user_id = int(request.args.get('user_id'))
+	return "User ID is " + user_id
+
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
 
