@@ -14,7 +14,7 @@ def homepage():
 
 @app.route('/user', methods = ['GET'])
 def get_user():
-	user_id = int(request.args.get('user_id'))
+	user_id = request.args.get('user_id')
 	return "User ID is " + user_id
 
 if __name__ == '__main__':
